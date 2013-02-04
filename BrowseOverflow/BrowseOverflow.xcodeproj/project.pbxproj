@@ -23,7 +23,6 @@
 		18529F1116BF4A9B00D45C58 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18529EE816BF4A9A00D45C58 /* UIKit.framework */; };
 		18529F1216BF4A9B00D45C58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18529EEA16BF4A9A00D45C58 /* Foundation.framework */; };
 		18529F1A16BF4A9B00D45C58 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18529F1816BF4A9B00D45C58 /* InfoPlist.strings */; };
-		18529F1D16BF4A9B00D45C58 /* BrowseOverflowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18529F1C16BF4A9B00D45C58 /* BrowseOverflowTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +58,6 @@
 		18529F0F16BF4A9B00D45C58 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		18529F1716BF4A9B00D45C58 /* BrowseOverflowTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BrowseOverflowTests-Info.plist"; sourceTree = "<group>"; };
 		18529F1916BF4A9B00D45C58 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		18529F1B16BF4A9B00D45C58 /* BrowseOverflowTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowseOverflowTests.h; sourceTree = "<group>"; };
-		18529F1C16BF4A9B00D45C58 /* BrowseOverflowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowseOverflowTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +117,6 @@
 		18529EEE16BF4A9A00D45C58 /* BrowseOverflow */ = {
 			isa = PBXGroup;
 			children = (
-				18529EF716BF4A9A00D45C58 /* BrowseOverflowAppDelegate.h */,
-				18529EF816BF4A9A00D45C58 /* BrowseOverflowAppDelegate.m */,
 				18529F0016BF4A9A00D45C58 /* MainStoryboard.storyboard */,
 				18529F0316BF4A9A00D45C58 /* BrowseOverflowMasterViewController.h */,
 				18529F0416BF4A9A00D45C58 /* BrowseOverflowMasterViewController.m */,
@@ -135,6 +130,8 @@
 		18529EEF16BF4A9A00D45C58 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18529EF716BF4A9A00D45C58 /* BrowseOverflowAppDelegate.h */,
+				18529EF816BF4A9A00D45C58 /* BrowseOverflowAppDelegate.m */,
 				18529EF016BF4A9A00D45C58 /* BrowseOverflow-Info.plist */,
 				18529EF116BF4A9A00D45C58 /* InfoPlist.strings */,
 				18529EF416BF4A9A00D45C58 /* main.m */,
@@ -149,8 +146,6 @@
 		18529F1516BF4A9B00D45C58 /* BrowseOverflowTests */ = {
 			isa = PBXGroup;
 			children = (
-				18529F1B16BF4A9B00D45C58 /* BrowseOverflowTests.h */,
-				18529F1C16BF4A9B00D45C58 /* BrowseOverflowTests.m */,
 				18529F1616BF4A9B00D45C58 /* Supporting Files */,
 			);
 			path = BrowseOverflowTests;
@@ -287,7 +282,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18529F1D16BF4A9B00D45C58 /* BrowseOverflowTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
