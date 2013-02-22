@@ -8,11 +8,18 @@
 
 #import "TopicTests.h"
 #import "Topic.h"
+#define HC_SHORTHAND
+#import <OCHamcrest/OCHamcrest.h>
 
-@implementation TopicTests
+@implementation TopicTests {
+    NSString *name;
+    NSString *tag;
+}
 
 - (void)setUp {
-    topic = [[Topic alloc] initWithName:@"iPhone" tag:@"iphone"];
+    name = @"iPhone";
+    tag = @"iphone";
+    topic = [[Topic alloc] initWithName:name tag:tag];
 }
 
 - (void)tearDown {
@@ -20,29 +27,29 @@
 }
 
 - (void)testThatTopicExists {
-    STAssertNotNil(topic, @"should be able to create a Topic instance");
+    assertThat(topic, notNilValue());
 }
 
 - (void)testThatTopicCanBeNamed {
-    STAssertEqualObjects(topic.name, @"iPhone", @"the Topic should have the name I gave it");
+    assertThat(topic.name, equalTo(name));
 }
 
 - (void)testThatTopicHasATag {
-    STAssertEqualObjects(topic.tag, @"iphone", @"Topics need  to have tags");
+    assertThat(topic.tag, equalTo(tag));
 }
 
 - (void)testForAListOfQuestions {
-    STAssertTrue([[topic recentQuestions] isKindOfClass:[NSArray class]], @"Topics should provide a list of recent questions");
+    assertThat([topic recentQuestions], instanceOf([NSArray class]));
 }
 
 - (void)testForInitiallyEmptyQuestionList {
-    STAssertEquals([[topic recentQuestions] count], (NSUInteger)0, @"No questions added yet, count should be zero");
+    assertThat([topic recentQuestions], hasCountOf(0));
 }
 
 - (void)testAddingAQuestionToTheList {
     Question *question = [[Question alloc] init];
     [topic addQuestion: question];
-    STAssertEquals([[topic recentQuestions] count], (NSUInteger)1, @"Add a question, and the count of questions should go up");
+    assertThat([topic recentQuestions], hasCountOf(1));
 }
 
 - (void)testQuestionsAreListedChronologically {
@@ -57,7 +64,7 @@
     Question *listedFirst = [questions objectAtIndex:0];
     Question *listedSecond = [questions objectAtIndex:1];
     
-    STAssertEqualObjects([listedFirst.date laterDate:listedSecond.date], listedFirst.date, @"The later question should appear first in the list");
+    assertThat([listedFirst.date laterDate:listedSecond.date], equalTo(listedFirst.date));
 }
 
 - (void)testLimitOfTwentyQuestions {
@@ -65,7 +72,7 @@
     for (NSInteger i = 0; i < 25; i++) {
         [topic addQuestion:q];
     }
-    STAssertTrue([[topic recentQuestions] count] < 21, @"There should never be more than twenty questions");
+    assertThat([NSNumber numberWithInt:[[topic recentQuestions] count]], lessThan([NSNumber numberWithInt:21]));
 }
 
 @end

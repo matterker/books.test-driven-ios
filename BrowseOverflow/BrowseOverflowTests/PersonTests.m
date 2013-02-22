@@ -8,13 +8,19 @@
 
 #import "PersonTests.h"
 #import "Person.h"
+#define HC_SHORTHAND
+#import <OCHamcrest/OCHamcrest.h>
 
 @implementation PersonTests {
+    NSString *name;
+    NSString *location;
     Person *person;
 }
 
 - (void)setUp {
-    person = [[Person alloc] initWithName:@"Graham Lee" avatarLocation:@"http://example.com/avatar.png"];
+    name = @"Graham Lee";
+    location = @"http://example.com/avatar.png";
+    person = [[Person alloc] initWithName:name avatarLocation:location];
 }
 
 - (void)tearDown {
@@ -22,12 +28,11 @@
 }
 
 - (void)testThatPersonHasTheRightName {
-    STAssertEqualObjects(person.name, @"Graham Lee", @"expecting a person to provide its name");
+    assertThat(person.name, equalTo(name));
 }
 
 - (void)testThatPersonHasAnAvatarURL {
-    NSURL *url = person.avatarURL;
-    STAssertEqualObjects([url absoluteString], @"http://example.com/avatar.png", @"The person's avatar should be represented by a URL");
+    assertThat([person.avatarURL absoluteString], equalTo(location));
 }
 
 @end
