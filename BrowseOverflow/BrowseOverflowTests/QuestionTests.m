@@ -15,6 +15,8 @@
     NSString *title;
     int score;
     Question *question;
+    Answer *lowScore;
+    Answer *highScore;
 }
 
 - (void)setUp {
@@ -23,10 +25,25 @@
     question.date = [NSDate distantPast];
     question.title = title;
     question.score = score;
+    
+    Answer *acceptedAnswer = [[Answer alloc] init];
+    acceptedAnswer.score = 1;
+    acceptedAnswer.accepted = YES;
+    [question addAnswer: acceptedAnswer];
+    
+    lowScore = [[Answer alloc] init];
+    lowScore.score = -4;
+    [question addAnswer:lowScore];
+    
+    highScore = [[Answer alloc] init];
+    highScore.score = 4;
+    [question addAnswer:highScore];
 }
 
 - (void)tearDown {
     question = nil;
+    lowScore = nil;
+    highScore = nil;
 }
 
 - (void)testQuestionHasADate {
@@ -41,6 +58,22 @@
 
 - (void)testQuestionHasATitle {
     assertThat(question.title, equalTo(title));
+}
+
+- (void)testQuestionCanHaveAnswerAdded {
+    Answer *myAnswer = [[Answer alloc] init];
+    STAssertNoThrow([question addAnswer:myAnswer], @"should not throw exception");
+}
+
+- (void)testAcceptedAnswerIsFirst {
+    assertThatBool([[question.answers objectAtIndex: 0] isAccepted], equalToBool(YES));
+}
+
+- (void)testHighScoreAnswerBeforeLow {
+    NSArray *answers = question.answers;
+    NSInteger highIndex = [answers indexOfObject:highScore];
+    NSInteger lowIndex = [answers indexOfObject:lowScore];
+    assertThat([NSNumber numberWithInt:highIndex], lessThan([NSNumber numberWithInt:lowIndex]));
 }
 
 @end
