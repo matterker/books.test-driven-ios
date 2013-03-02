@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "18529EE416BF4A9A00D45C58"
-               BuildableName = "BrowseOverflow.app"
-               BlueprintName = "BrowseOverflow"
+               BlueprintIdentifier = "18529F0D16BF4A9B00D45C58"
+               BuildableName = "BrowseOverflowTests.octest"
+               BlueprintName = "BrowseOverflowTests"
                ReferencedContainer = "container:BrowseOverflow.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -39,15 +39,6 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "18529EE416BF4A9A00D45C58"
-            BuildableName = "BrowseOverflow.app"
-            BlueprintName = "BrowseOverflow"
-            ReferencedContainer = "container:BrowseOverflow.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -58,15 +49,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "18529EE416BF4A9A00D45C58"
-            BuildableName = "BrowseOverflow.app"
-            BlueprintName = "BrowseOverflow"
-            ReferencedContainer = "container:BrowseOverflow.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -76,15 +58,6 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "18529EE416BF4A9A00D45C58"
-            BuildableName = "BrowseOverflow.app"
-            BlueprintName = "BrowseOverflow"
-            ReferencedContainer = "container:BrowseOverflow.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -250,8 +250,8 @@
 				18529F0916BF4A9B00D45C58 /* Sources */,
 				18529F0A16BF4A9B00D45C58 /* Frameworks */,
 				18529F0B16BF4A9B00D45C58 /* Resources */,
-				18529F0C16BF4A9B00D45C58 /* ShellScript */,
 				11DB54B95E444301AEF65332 /* Copy Pods Resources */,
+				18529F0C16BF4A9B00D45C58 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -341,6 +341,7 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
