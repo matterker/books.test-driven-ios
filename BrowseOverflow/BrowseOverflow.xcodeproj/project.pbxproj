@@ -328,6 +328,7 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		18529F0C16BF4A9B00D45C58 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
