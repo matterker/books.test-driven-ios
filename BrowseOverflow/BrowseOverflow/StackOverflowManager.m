@@ -17,4 +17,19 @@
     _delegate = delegate;
 }
 
+- (void)fetchQuestionsOnTopic:(Topic *)topic {
+    [self.communicator searchForQuestionsWithTag:[topic tag]];
+}
+
+- (void)searchingForQuestionsFailedWithError:(NSError *)error {
+    NSDictionary *errorInfo = [NSDictionary dictionaryWithObject:error forKey:NSUnderlyingErrorKey];
+    NSError *reportableError = [NSError
+                                errorWithDomain:StackOverflowManagerError
+                                           code:StackOverflowManagerErrorQuestionSearchCode
+                                       userInfo:errorInfo];
+    [self.delegate fetchingQuestionsOnTopic:nil failedWithError:reportableError];
+}
+
 @end
+
+NSString *StackOverflowManagerError = @"StackOverflowManagerError";

@@ -8,7 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "StackOverflowManagerDelegate.h"
+#import "Topic.h"
 
 @interface MockStackOverflowManagerDelegate : NSObject <StackOverflowManagerDelegate>
+
+@property (strong) NSError *fetchError;
+
+- (void)fetchingQuestionsOnTopic:(Topic *)topic failedWithError:(NSError *)error;
 
 @end

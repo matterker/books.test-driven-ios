@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Topic.h"
 
 @protocol StackOverflowManagerDelegate <NSObject>
+
+- (void)fetchingQuestionsOnTopic:(Topic *)topic failedWithError:(NSError *)error;
 
 @end
