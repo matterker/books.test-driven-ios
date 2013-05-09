@@ -23,7 +23,6 @@
 		181BA335173B484400FC879E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181BA30C173B484400FC879E /* UIKit.framework */; };
 		181BA336173B484400FC879E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181BA30E173B484400FC879E /* Foundation.framework */; };
 		181BA33E173B484400FC879E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 181BA33C173B484400FC879E /* InfoPlist.strings */; };
-		181BA341173B484400FC879E /* BrowseOverflowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181BA340173B484400FC879E /* BrowseOverflowTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +58,6 @@
 		181BA333173B484400FC879E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		181BA33B173B484400FC879E /* BrowseOverflowTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BrowseOverflowTests-Info.plist"; sourceTree = "<group>"; };
 		181BA33D173B484400FC879E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		181BA33F173B484400FC879E /* BrowseOverflowTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowseOverflowTests.h; sourceTree = "<group>"; };
-		181BA340173B484400FC879E /* BrowseOverflowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowseOverflowTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,8 +146,6 @@
 		181BA339173B484400FC879E /* BrowseOverflowTests */ = {
 			isa = PBXGroup;
 			children = (
-				181BA33F173B484400FC879E /* BrowseOverflowTests.h */,
-				181BA340173B484400FC879E /* BrowseOverflowTests.m */,
 				181BA33A173B484400FC879E /* Supporting Files */,
 			);
 			path = BrowseOverflowTests;
@@ -286,7 +281,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				181BA341173B484400FC879E /* BrowseOverflowTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
