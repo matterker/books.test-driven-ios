@@ -16,4 +16,9 @@
     STAssertNotNil(newTopic, @"shold be able to create a Topic instance");
 }
 
+-(void)testThatTopicCanBeNamed {
+    Topic *namedTopic = [[Topic alloc] initWithName: @"iPhone"];
+    STAssertEqualObjects(namedTopic, @"iPhone", @"the Topic should have the same I gave it");
+}
+
 @end
